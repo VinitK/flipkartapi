@@ -10,3 +10,6 @@
 [0703/172341.508:ERROR:file_io_win.cc(163)] CreateFile C:\Users\Public\Documents\Google\Chrome\settings.dat: Access is denied. (0x5)
 [0703/172341.558:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: The pipe has been ended. (0x6D)
 [0703/172341.561:ERROR:file_io_win.cc(163)] CreateFile C:\Users\Public\Documents\Google\Chrome\settings.dat: Access is denied. (0x5)
+[0703/172629.866:ERROR:file_io_win.cc(163)] CreateFile C:\Users\Public\Documents\Google\Chrome\settings.dat: Access is denied. (0x5)
+[0703/172629.871:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0703/172629.873:ERROR:file_io_win.cc(163)] CreateFile C:\Users\Public\Documents\Google\Chrome\settings.dat: Access is denied. (0x5)

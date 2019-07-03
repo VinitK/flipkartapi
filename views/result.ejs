@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <%- include('include/head', {title: title}); %>
+</head>
+    <body>
+        <div class="jumbotron text-center">
+            <h1 class="display-4 text-capitalize"><%=title%></h1>
+        </div>
+        <div class="container">
+            <% if (products.products.length>0) { %>
+            <div class="accordion" id="accordionExample">
+                <% products.products.forEach(function(product, index) { %>
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<%=index%>" aria-expanded="true" aria-controls="collapseOne">
+                            <%=product.productBaseInfoV1.title%>
+                        </button>
+                    </h2>
+                    </div>
+                
+                    <div id="collapse<%=index%>" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <% if (product.productBaseInfoV1.productDescription) { %>
+                        <div class="card-body">
+                            <%=product.productBaseInfoV1.productDescription%>
+                        </div>
+                        <% } %>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">MRP: <%=product.productBaseInfoV1.maximumRetailPrice.currency%> <%=product.productBaseInfoV1.maximumRetailPrice.amount%></li>
+                            <li class="list-group-item">Flipkart Price: <%=product.productBaseInfoV1.flipkartSellingPrice.currency%> <%=product.productBaseInfoV1.flipkartSellingPrice.amount%></li>
+                            <li class="list-group-item">Flipkart Special Price: <%=products.products[0].productBaseInfoV1.flipkartSpecialPrice.currency%> <%=product.productBaseInfoV1.flipkartSpecialPrice.amount%></li>
+                            <li class="list-group-item">Brand: <%=products.products[0].productBaseInfoV1.productBrand%></li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="<%=product.productBaseInfoV1.productUrl%>" class="btn btn-secondary">See Product on Flipkart</a>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+            <% } else { %>
+                <div class="text-center">
+                    <h2>No products found</h2>
+                </div>
+            <% } %>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "name": "flipkartapi",
+  "version": "1.0.0",
+  "description": "Uses Flipkart's Affiliate API to search products and display.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-server": "node app.js",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VinitK/flipkartapi.git"
+  },
+  "keywords": [
+    "flipkart",
+    "api"
+  ],
+  "author": "Vinit Khandelwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VinitK/flipkartapi/issues"
+  },
+  "homepage": "https://github.com/VinitK/flipkartapi#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "csurf": "^1.10.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "flipkart-api-affiliate-client": "^1.1.0",
+    "helmet": "^3.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

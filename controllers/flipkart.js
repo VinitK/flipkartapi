@@ -1,8 +1,8 @@
 const client = require('flipkart-api-affiliate-client');
 
 const fkClient = new client({
-    trackingId:"yuganshch",
-    token:"34adf1305516462d8ce93de45594da81",
+    trackingId:process.env.FLIPKART_TRACKING_ID,
+    token:process.env.FLIPKART_TOKEN,
 },"json");
 
 exports.searchResult = (req, res) => {

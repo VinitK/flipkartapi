@@ -42,5 +42,5 @@ app.get('/result', flipkartController.searchResult);
 app.get('/', flipkartController.display);
 
 app.listen(process.env.PORT || 8000, () => {
-  console.log('Example app listening on port')
+  console.log('App listening on port')
 });

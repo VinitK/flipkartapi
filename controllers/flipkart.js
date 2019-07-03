@@ -1,4 +1,5 @@
 const client = require('flipkart-api-affiliate-client');
+const env = require('dotenv');
 
 const fkClient = new client({
     trackingId:process.env.FLIPKART_TRACKING_ID,
